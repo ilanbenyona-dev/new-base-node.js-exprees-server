@@ -4,7 +4,7 @@ import { verify } from "jsonwebtoken";
 import { UserManager } from '../user/user.manager';
 
 const auth = (req, res, next) => {
-    // get barber token
+    // get bearer token
     const authHeader = req.headers.authorization;
     if (!authHeader) return res.sendStatus(401);
     const token = authHeader.split(' ')[1];
